@@ -1,0 +1,36 @@
+class Const_overloading { 
+    double num1, num2; 
+ 
+    // Default constructor 
+    Const_overloading() { 
+        num1 = 0; 
+        num2 = 0; 
+    } 
+    // Constructor with two parameters 
+    Const_overloading(double num1, double num2) { 
+        this.num1 = num1; 
+        this.num2 = num2; 
+    } 
+ 
+    // Constructor with three parameters 
+    Const_overloading(double num1, double num2, double num3) { 
+        this.num1 = num1; 
+        this.num2 = num2 + num3; 
+    } 
+ 
+    public void Sum() { 
+        double ans = num1 + num2; 
+        System.out.println("num1 = " + num1); 
+        System.out.println("num2 = " + num2); 
+        System.out.println("Sum = " + ans); 
+        System.out.println(); 
+} 
+public static void main(String[] args) { 
+Const_overloading obj1 = new Const_overloading(); 
+Const_overloading obj2 = new Const_overloading(10, 20); 
+Const_overloading obj3 = new Const_overloading(10, 20, 30); 
+obj1.Sum(); 
+obj2.Sum(); 
+obj3.Sum(); 
+} 
+}

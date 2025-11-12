@@ -1,0 +1,73 @@
+class Player {
+    String name;
+
+    Player(String n) {
+        name = n;
+    }
+
+    void show() {
+        System.out.println("name : " + name);
+    }
+
+}
+
+class Cricket_Player extends Player {
+    String role;
+
+    Cricket_Player(String nm, String r) {
+        super(nm);
+        role = r;
+
+    }
+
+    void display() {
+        System.out.println("\nCricket_Player ");
+        show();
+        System.out.println("role: " + role);
+    }
+}
+
+class Football_Player extends Player {
+    String role;
+
+    Football_Player(String nm, String r) {
+        super(nm);
+        role = r;
+
+    }
+
+    void display() {
+        System.out.println("\nFootball_Player ");
+        show();
+        System.out.println("role :" + role);
+
+    }
+}
+
+class Hockey_Player extends Player {
+    String role;
+
+    Hockey_Player(String nm, String r) {
+        super(nm);
+        role = r;
+    }
+
+    void display() {
+        System.out.println("\nHockey_Player ");
+        show();
+        System.out.println("role: " + role);
+
+    }
+
+}
+
+class PlayerDemo {
+    public static void main(String[] args) {
+        Cricket_Player obj1 = new Cricket_Player(" MS.Dhoni", "Batsman");
+        Football_Player obj2 = new Football_Player("Messi ", "Kicker ");
+        Hockey_Player obj3 = new Hockey_Player("Shubham  Sirst ", "Vice-President  ");
+        obj1.display();
+        obj2.display();
+        obj3.display();
+    }
+}

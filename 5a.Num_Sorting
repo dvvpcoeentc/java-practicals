@@ -1,0 +1,37 @@
+
+import java.util.Scanner;
+
+public class SortingDemo {
+   public SortingDemo() {
+   }
+
+   public static void main(String[] var0) {
+      Scanner var5 = new Scanner(System.in);
+      System.out.println("how may numbers are to be sorted ");
+      int var1 = var5.nextInt();
+      int[] var6 = new int[var1];
+      System.out.println("enters integers ....");
+
+      int var2;
+      for(var2 = 0; var2 < var1; ++var2) {
+         var6[var2] = var5.nextInt();
+      }
+
+      for(var2 = 0; var2 < var1 - 1; ++var2) {
+         for(int var3 = 0; var3 < var1 - var2 - 1; ++var3) {
+            if (var6[var3] > var6[var3 + 1]) {
+               int var4 = var6[var3];
+               var6[var3] = var6[var3 + 1];
+               var6[var3 + 1] = var4;
+            }
+         }
+      }
+
+      System.out.println("Sorted list of integers...");
+
+      for(var2 = 0; var2 < var1; ++var2) {
+         System.out.println(" " + var6[var2]);
+      }
+
+   }
+}

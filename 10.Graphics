@@ -1,0 +1,31 @@
+
+
+
+import java.applet.Applet; 
+import java.awt.*; 
+import javax.swing.JFrame; 
+import javax.swing.JPanel; 
+import java.applet.*; 
+ 
+/* 
+<applet code="GraphicsDemo" width=300 height=300> 
+</applet> 
+*/ 
+ class GraphicsDemo1 extends JPanel { 
+    public void paint(Graphics g) { 
+        g.drawLine(70, 30, 200, 30); 
+        g.drawString("Line", 120, 50); 
+        g.drawOval(10, 10, 50, 100); 
+        g.drawString("Oval", 25, 130); 
+       g.drawRect(70, 70, 70, 70); 
+        g.drawString("Rectangle", 80, 160); 
+g.drawString("It is a Demo of various graphics objects", 40, 250); 
+    } 
+ 
+public static void main(String[] args) { 
+JFrame frame = new JFrame("Graphics Demo"); 
+frame.setSize(600, 600); 
+frame.add(new GraphicsDemo1()); 
+frame.setVisible(true); 
+} 
+} 
